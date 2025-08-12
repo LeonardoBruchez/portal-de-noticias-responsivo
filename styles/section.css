@@ -1,6 +1,7 @@
 #featured {
   position: relative;
     & >figure:nth-child(1) {
+      margin-bottom: 1rem;
     & img {
       width: 20.5rem;
       height: 26rem;
@@ -19,27 +20,36 @@
   
   
   & .card {
+    max-width: 20.5rem;
+    border-radius: .25rem;
     position: relative;
+    overflow: hidden;
     & img {
       width: 20.5rem;
       height: 12.5rem;
       object-fit: cover;
       border-radius: .25rem;
+      overflow: hidden;
     }
 
     &::before {
-    content: "";
-    background: linear-gradient(360deg,#020617,#02061700);
-    inset: 0;
-    position: absolute;
-    top: 50%;
-  }
+      content: "";
+      background: linear-gradient(to top,#020617,#02061700);
+      inset: 0;
+      position: absolute;
+      top: 50%;
+    }
 
     & figcaption {
+      flex-direction: column;
       position: absolute;
       bottom: 1rem;
       left: 1rem;
-
+      display: flex;
+      gap: 0.5rem;
+      & span {
+        align-self: flex-start;
+      }
       & h2 {
         font: var(--heading3);
       }
@@ -61,20 +71,41 @@
   #featured {
     display: flex;
     gap: 1rem;
-
+ 
     &>div {
       gap: 1rem;
     }
 
+    & figcaption {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+      & span {
+        align-self: flex-start;
+      }
+    }
 
     & >figure:nth-child(1) {
+      margin-bottom: 0;
       max-width: 38rem;
       & img {
         width: 38rem;
         height: 26rem;
-      }  
+        border-radius: .25rem;
+      }
+        
+        & h2 {
+          font: var(--heading1);
+        }
+      
     }
+    
     & .card {
+      overflow: hidden;
       max-width: 18rem;
       & img {
         width: 18rem;

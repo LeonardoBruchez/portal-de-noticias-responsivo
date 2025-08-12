@@ -1,3 +1,8 @@
+.main-container {
+  max-width: 22.5rem;
+  margin: auto;
+}
+
 .grid {
   display: grid;
 }
@@ -31,15 +36,12 @@
   padding-inline: var(--px-md);
 }
 
-
-
-
-
-
-
-
-
 @media (width >=80em) {
+
+  .main-container {
+    max-width: 80em;
+    margin: auto;
+  }
   .desktop-only {
     display: initial;
   }
