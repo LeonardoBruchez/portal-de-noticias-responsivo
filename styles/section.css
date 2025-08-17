@@ -20,6 +20,7 @@
   
   
   & .card {
+    gap: 0.5rem;
     max-width: 20.5rem;
     border-radius: .25rem;
     position: relative;
@@ -41,33 +42,166 @@
     }
 
     & figcaption {
-      flex-direction: column;
       position: absolute;
       bottom: 1rem;
       left: 1rem;
-      display: flex;
-      gap: 0.5rem;
-      & span {
-        align-self: flex-start;
-      }
-      & h2 {
-        font: var(--heading3);
-      }
     }
-  }
-  
-
-  
-  & span {
-    background-color: var(--brand-color-dark);
-    padding: 4px 8px;
-    text-transform: uppercase;
-    border-radius: .25rem;
-    font: 500 .625rem/120% var(--ff);
   }
 }
 
+#weekly {
+  & header {
+    border-top: 1px solid var(--stroke-color);
+    padding-top: .75rem;
+    justify-content: space-between;
+
+    & div {
+      align-items: center;
+      gap: .25rem;
+      
+    }
+
+    & h3,strong {
+      font: var(--span);
+      color: var(--text-color-secondary);
+    }
+  }
+
+  & div {
+    & .card {
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      position: relative;
+  
+      & h2 {
+        font: var(--heading2);
+      }
+      & img {
+        width: 20.5rem;
+        height: 10rem;
+      }
+  
+      & figcaption {
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+      }
+    }
+  }
+}
+
+
+header {
+  & span {
+    background: url(../assets/icons/arrowRight.svg) no-repeat center/cover;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+
+#IA {
+  width: 20.5;
+  & header {
+    border-top: 1px solid var(--stroke-color);
+    padding-top: .75rem;
+    gap: 1.93rem;
+    & strong,h3 {
+      font: var(--span);
+      color: var(--text-color-secondary );
+    }
+    & .Arrowright-wrapper {
+      align-items: center;
+      gap: .25rem;
+      display: flex;
+      & span {
+       background: url(../assets/icons/arrowRight.svg) no-repeat center/cover;
+       width: 16px;
+       height: 16px;
+      }
+    }
+  }
+
+  & >div {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 2rem;
+    & figure {
+      gap: 1rem;
+      & img {
+        width: 5rem;
+        height: 5rem;
+      }
+  
+      & figcaption {
+        & h2 {
+          margin-top: .5rem;
+          font: var(--heading2);
+        }
+  
+        & p {
+          font: var(--text);
+          color: var(--text-color-secondary);
+        }
+      }
+    }
+  }
+}
+
+#ADS {
+  & > img {
+    margin-top:2rem;
+    width: 20.5rem;
+    height: 11.78625rem;
+  }
+  & header {
+    padding-top: .75rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--stroke-color);
+    justify-content: space-between;
+    & h3,strong {
+      font: var(--span);
+      color: var(--text-color-secondary);
+    }
+    & .Arrowright-wrapper {
+      gap: .25rem;
+      display: flex;
+      align-items: center;
+      & span {
+        background: url(../assets/icons/arrowRight.svg) no-repeat center/cover;
+        width:16px;
+        height:16px;
+      }
+    }
+  } 
+
+  & >div {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 2rem;
+    & figure {
+    gap: 0.9375rem;
+    & img {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+    & figcaption h2{
+      margin-top: .5rem;
+      font: 400 .875rem/140% "Archivo Black", sans-serif;
+      color: var(--text-color-primary);
+    }
+  }
+  }
+  
+}
+
 @media (width >=80em) {
+  aside {
+    display: grid;
+    grid-template-columns: 57.24% 40.13%;
+    gap: 2rem;
+  }
   #featured {
     display: flex;
     gap: 1rem;
@@ -105,6 +239,7 @@
     }
     
     & .card {
+      gap: 0.5rem;
       overflow: hidden;
       max-width: 18rem;
       & img {
@@ -119,5 +254,41 @@
         left: 1rem;
       }
     }
+  }
+
+  #weekly {
+
+    & > .card-wrapper {
+      display: flex;
+      gap: 1rem;
+
+      & figure {
+        display: grid;
+        & > img,h2 {
+          width: 18.25rem;
+        }
+      }
+    }
+  }
+
+  #IA {
+    & header {
+      justify-content: space-between;
+    }
+    &>div {
+      & figure img {
+        width: 11rem;
+        height: 11rem;
+      }
+    }
+  }
+
+  #ADS {
+    & > img {
+      margin-top: 0;
+      width: 30.5rem;
+      height: 17.5rem;
+    }
+    
   }
 }

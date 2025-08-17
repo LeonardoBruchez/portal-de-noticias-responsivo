@@ -1,7 +1,8 @@
-.main-container {
+main,aside {
   max-width: 22.5rem;
   margin: auto;
 }
+
 
 .grid {
   display: grid;
@@ -36,9 +37,32 @@
   padding-inline: var(--px-md);
 }
 
+.card {
+  & figcaption {
+    flex-direction: column;
+    display: flex;
+
+    & span {
+      align-self: flex-start;
+      background-color: var(--brand-color-dark);
+      padding: 4px 8px;
+      text-transform: uppercase;
+      border-radius: .25rem;
+      font: 500 .625rem/120% var(--ff);
+    }
+    & h2 {
+      font: var(--heading3);
+    }
+  }
+}
+
 @media (width >=80em) {
 
-  .main-container {
+  .row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  main,aside {
     max-width: 80em;
     margin: auto;
   }

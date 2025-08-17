@@ -5,7 +5,7 @@
 }
 
 :root {
-  --brand-color-light:#60A5FA;
+  --brand-color-light:#60A5FA;  
   --brand-color-dark:#1D4ED8;
   --bg-color:#0F172A;
   --stroke-color:#1E293B;
@@ -32,6 +32,7 @@ body {
   background-color: var(--bg-color);
   font: var(--heading2);
   color: var(--text-color-primary);
+  margin-bottom: 5rem;
 }
 
 @media (width >=80em) {
